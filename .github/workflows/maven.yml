@@ -34,7 +34,7 @@ jobs:
       working-directory: ./DockerizingOurApp/rest-with-spring-boot-and-java-erudio
       run: mvn clean package
     - name: Docker Compose Build
-      working-directory: ./spring3-docker-java18
+      working-directory: ./
       run: docker compose build
     - name: Push to Docker Hub Container Registry
       run: |
