@@ -32,11 +32,11 @@ jobs:
         cache: maven
     
     - name: Build Application JAR
-      working-directory: ./projetos/Udemy/springboot3-java18-aws/backup/DockerizingOurApp
+      working-directory: c/projetos/Udemy/springboot3-java18-aws/backup/DockerizingOurApp
       run: mvn clean package -DskipTests
       
     - name: Docker Compose Build
-      working-directory: ./projetos/Udemy/springboot3-java18-aws/backup/DockerizingOurApp
+      working-directory: ./spring3-docker-java18
       run: docker compose build
     - name: Push to Docker Hub Container Registry
       run: |
