@@ -32,11 +32,11 @@ jobs:
         cache: maven
     
     - name: Build Application JAR
-      working-directory: ./DockerizingOurApp/rest-with-spring-boot-and-java-erudio
+      working-directory: ./projetos/Udemy/springboot3-java18-aws/backup/DockerizingOurApp
       run: mvn clean package -DskipTests
       
     - name: Docker Compose Build
-      working-directory: ./DockerizingOurApp/
+      working-directory: ./projetos/Udemy/springboot3-java18-aws/backup/DockerizingOurApp
       run: docker compose build
     - name: Push to Docker Hub Container Registry
       run: |
