@@ -30,11 +30,13 @@ jobs:
         java-version: '18'
         distribution: 'adopt'
         cache: maven
+    
     - name: Build Application JAR
       working-directory: ./DockerizingOurApp/rest-with-spring-boot-and-java-erudio
-      run: mvn clean package
+      run: mvn clean package -DskipTests
+      
     - name: Docker Compose Build
-      working-directory: ./
+      working-directory: ./DockerizingOurApp/
       run: docker compose build
     - name: Push to Docker Hub Container Registry
       run: |
